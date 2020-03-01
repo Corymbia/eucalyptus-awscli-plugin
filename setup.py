@@ -6,13 +6,15 @@ from setuptools import setup
 requires = ['awscli>=1.11.0']
 
 project_dir = path.abspath(path.dirname(__file__))
+with open(path.join(project_dir, 'VERSION'), 'rb') as version:
+    version = version.read().decode('UTF-8')
 with open(path.join(project_dir, 'README.md'), 'rb') as readme:
     long_description = readme.read().decode('UTF-8')
 
 setup(
     name='awscli-plugin-eucalyptus',
     packages=['awscli_plugin_eucalyptus'],
-    version='0.2',
+    version=version,
     description='Eucalyptus plugin for AWS CLI',
     long_description=long_description,
     long_description_content_type='text/markdown',
