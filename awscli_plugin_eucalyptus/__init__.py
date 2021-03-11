@@ -7,6 +7,7 @@ CA_BUNDLE = 'ca_bundle'
 COMMAND_SERVICE_MAP = {
   'cloudwatch': 'monitoring',
   'elb': 'elasticloadbalancing',
+  'elbv2': 'elasticloadbalancing',
   's3api': 's3'
 }
 
